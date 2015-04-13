@@ -10,6 +10,7 @@ import 'dart:js';
 import 'package:polymer/polymer.dart';
 import 'package:route_hierarchical/client.dart';
 import 'src/elements.dart';
+import 'src/first_page.dart';
 
 /// Simple class which maps page names to paths.
 class Page {
@@ -30,11 +31,11 @@ class ExampleApp extends PolymerElement {
 
   /// The list of pages in our app.
   final List<Page> pages = const [
-    const Page('Single', 'one', isDefault: true),
-    const Page('page', 'two'),
-    const Page('app', 'three'),
-    const Page('using', 'four'),
-    const Page('Polymer', 'five'),
+    const Page('First', 'one', isDefault: true),
+    const Page('Second', 'two'),
+    const Page('Third', 'three'),
+    const Page('Fourth', 'four'),
+    const Page('Fifth', 'five'),
   ];
 
   /// The path of the current [Page].

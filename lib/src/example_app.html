@@ -9,8 +9,8 @@
 
     <core-scaffold id="scaffold">
       <nav>
-        <core-toolbar>
-          <span>Single Page Polymer</span>
+        <core-toolbar layout horizontal center-center>
+          <core-image src="Logotron-Red.svg"></core-image>
         </core-toolbar>
         <core-menu id="menu" valueattr="hash" selected="{{route}}">
           <template repeat="{{page in pages}}">
@@ -26,19 +26,31 @@
 
       <core-toolbar tool flex>
         <div flex>{{selectedPage.name}}</div>
-        <core-icon-button icon="refresh"></core-icon-button>
-        <core-icon-button icon="add"></core-icon-button>
       </core-toolbar>
-
-      <div layout horizontal center-center fit>
+      <div layout horizontal fit>
         <core-animated-pages id="pages" selected="{{route}}" valueattr="hash"
                              transitions="slide-from-right"
                              on-tap="{{cyclePages}}">
-          <template repeat="{{page in pages}}">
-            <section hash="{{page.path}}" layout vertical center-center>
+<!--           <template repeat="{{page in pages}}">
+            <section hash="{{page.path}}" layout vertical>
               <div>{{page.name}}</div>
             </section>
-          </template>
+          </template> -->
+          <section hash="one" layout vertical>
+            <first-page flex></first-page>
+          </section>
+          <section hash="two" layout vertical>
+            <div>second</div>
+          </section>
+          <section hash="three" layout vertical>
+            <div>third</div>
+          </section>
+          <section hash="four" layout vertical>
+            <div>fourth</div>
+          </section>
+          <section hash="five" layout vertical>
+            <div>fifth</div>
+          </section>
         </core-animated-pages>
       </div>
 

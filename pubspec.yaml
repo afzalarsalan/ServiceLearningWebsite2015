@@ -1,20 +1,17 @@
-name: polymer_spa_example
+name: ServiceLearningWebsite
 version: 0.0.1
-description: A simple example of a full polymer app with multiple pages.
 author: Dart Team <misc@dartlang.org>
+description: A simple example of a full polymer app with multiple pages.
 homepage: https://github.com/dart-lang/polymer-spa-example
-
 environment:
-  sdk: '>=1.9.0-dev.7.1 <2.0.0'
-
+  sdk: any
 dependencies:
-  polymer: '^0.16.0'
-  core_elements: '^0.6.1'
-  paper_elements: '^0.6.2'
-  route_hierarchical: "^0.6.0"
-
+  core_elements: any
+  paper_elements: any
+  polymer: any
+  route_hierarchical: any
 transformers:
 - polymer:
     entry_points: web/index.html
 - $dart2js:
-    $include: "**/*.polymer.bootstrap.dart"
+    $include: '**/*.polymer.bootstrap.dart'
