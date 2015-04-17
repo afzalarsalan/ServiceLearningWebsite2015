@@ -2,4 +2,5 @@
 
 Built using Polymer
 
-Current State of the Website should be [here](afzalarsalan.github.io)
+Current State of the Website should be 
+[here](http://www.afzalarsalan.github.io)
