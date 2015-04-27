@@ -4,10 +4,13 @@
 }
 
 :host /deep/ core-toolbar {
-  background-color: #03a9f4;
+  background-color: #607D8B;
   color: #fff;
 }
 
+#drawer {
+  background-color:#455A64;
+}
 
 core-animated-pages {
   width: 100%;
@@ -17,11 +20,11 @@ core-animated-pages {
 
 core-animated-pages > * {
   font-size: 50px;
-  background-color: white;
+  background-color: #999999;
 }
 
 core-menu {
-  color: #01579b;
+  color: #FFFFFF;
   margin: 10px 0 0 0;
 }
 
@@ -33,10 +36,11 @@ paper-item a {
   text-decoration: none;
   color: currentcolor;
   margin-left: 5px;
+  outline: 0;
 }
 
 core-menu > paper-item.core-selected {
-  background: #e1f5fe;
+  background: #EF5350;
 }
 
 @media all and (max-width: 480px) {

@@ -8,7 +8,7 @@
                     on-keys-pressed="{{keyHandler}}"></core-a11y-keys>
 
     <core-scaffold id="scaffold">
-      <nav>
+      <core-header-panel id="drawer" navigation flex mode="seamed">
         <core-toolbar layout horizontal center-center>
           <core-image src="Logotron-Red.svg"></core-image>
         </core-toolbar>
@@ -22,15 +22,14 @@
             </paper-item>
           </template>
         </core-menu>
-      </nav>
+      </core-header-panel>
 
       <core-toolbar tool flex>
         <div flex>{{selectedPage.name}}</div>
       </core-toolbar>
       <div layout horizontal fit>
-        <core-animated-pages id="pages" selected="{{route}}" valueattr="hash"
-                             transitions="slide-from-right"
-                             on-tap="{{cyclePages}}">
+<!-- Readd on-tap="{{cyclePages}}" if you want pages to progress when clicking on blank space   -->
+        <core-animated-pages id="pages" selected="{{route}}" valueattr="hash" transitions="slide-from-right">              
 <!--           <template repeat="{{page in pages}}">
             <section hash="{{page.path}}" layout vertical>
               <div>{{page.name}}</div>
