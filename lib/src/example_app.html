@@ -7,9 +7,9 @@
                     keys="up down left right space space+shift"
                     on-keys-pressed="{{keyHandler}}"></core-a11y-keys>
 
-    <core-scaffold id="scaffold">
-      <core-header-panel id="drawer" navigation flex mode="seamed">
-        <core-toolbar layout horizontal center-center>
+    <core-scaffold id="scaffold" mode="waterfall-tall">
+      <core-header-panel id="drawer" navigation flex mode="standard">
+        <core-toolbar id="logo-holder" layout horizontal center-center>
           <core-image src="Logotron-Red.svg"></core-image>
         </core-toolbar>
         <core-menu id="menu" valueattr="hash" selected="{{route}}">

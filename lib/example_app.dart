@@ -44,7 +44,12 @@ class ExampleApp extends PolymerElement {
   /// The [Router] which is going to control the app.
   final Router router = new Router(useFragment: true);
 
-  ExampleApp.created() : super.created();
+  ExampleApp.created() : super.created() {
+    CoreHeaderPanel headerPanel = scaffold.shadowRoot
+        .querySelector('core-drawer-panel')
+        .querySelector('core-header-panel');
+    headerPanel.setAttribute('tallClass', 'medium-tall');
+  }
 
   /// Convenience getters that return the expected types to avoid casts.
   CoreA11yKeys get keys => $['keys'];
@@ -57,7 +62,9 @@ class ExampleApp extends PolymerElement {
     // Set up the routes for all the pages.
     for (var page in pages) {
       router.root.addRoute(
-          name: page.name, path: page.path, defaultRoute: page.isDefault,
+          name: page.name,
+          path: page.path,
+          defaultRoute: page.isDefault,
           enter: enterRoute);
     }
     router.listen();
@@ -98,7 +105,8 @@ class ExampleApp extends PolymerElement {
         corePages.selectNext(false);
         return;
       case 'space':
-        detail['shift'] ? corePages.selectPrevious(false)
+        detail['shift']
+            ? corePages.selectPrevious(false)
             : corePages.selectNext(false);
         return;
     }
@@ -110,7 +118,7 @@ class ExampleApp extends PolymerElement {
         route = pages[num - 1].path;
       }
       return;
-    } catch(e) {}
+    } catch (e) {}
   }
 
   /// Cycle pages on click.
