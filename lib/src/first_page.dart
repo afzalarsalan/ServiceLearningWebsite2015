@@ -1,5 +1,5 @@
 @HtmlImport('first_page.html')
-library polymer_core_and_paper_examples.spa.app;
+library firstPage;
 
 import 'dart:html';
 import 'dart:js';

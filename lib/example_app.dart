@@ -11,6 +11,7 @@ import 'package:polymer/polymer.dart';
 import 'package:route_hierarchical/client.dart';
 import 'src/elements.dart';
 import 'src/first_page.dart';
+import 'src/second_page.dart';
 
 /// Simple class which maps page names to paths.
 class Page {
