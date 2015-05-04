@@ -3,7 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 @HtmlImport('src/example_app.html')
-library polymer_core_and_paper_examples.spa.app;
+library servicelearning2015;
 
 import 'dart:html';
 import 'dart:js';
@@ -12,13 +12,17 @@ import 'package:route_hierarchical/client.dart';
 import 'src/elements.dart';
 import 'src/first_page.dart';
 import 'src/second_page.dart';
+import 'src/third_page.dart';
+import 'src/fourth_page.dart';
+import 'src/fifth_page.dart';
 
 /// Simple class which maps page names to paths.
 class Page {
   final String name;
   final String path;
+  final String header;
   final bool isDefault;
-  const Page(this.name, this.path, {this.isDefault: false});
+  const Page(this.name, this.path, this.header, {this.isDefault: false});
 
   String toString() => '$name';
 }
@@ -32,11 +36,11 @@ class ExampleApp extends PolymerElement {
 
   /// The list of pages in our app.
   final List<Page> pages = const [
-    const Page('First', 'one', isDefault: true),
-    const Page('Second', 'two'),
-    const Page('Third', 'three'),
-    const Page('Fourth', 'four'),
-    const Page('Fifth', 'five'),
+    const Page('First', 'one', 'Our mission' ,isDefault: true),
+    const Page('Second', 'two', 'The known truth'),
+    const Page('Third', 'three', 'The accepted failure'),
+    const Page('Fourth', 'four', 'The harsh reality'),
+    const Page('Fifth', 'five', 'What we can do'),
   ];
 
   /// The path of the current [Page].

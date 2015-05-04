@@ -25,7 +25,7 @@
       </core-header-panel>
 
       <core-toolbar tool flex>
-        <div flex>{{selectedPage.name}}</div>
+        <div flex>{{selectedPage.header}}</div>
       </core-toolbar>
       <div layout horizontal fit>
 <!-- Readd on-tap="{{cyclePages}}" if you want pages to progress when clicking on blank space   -->
@@ -39,16 +39,16 @@
             <first-page flex></first-page>
           </section>
           <section hash="two" layout vertical>
-              <second-page flex></second-page>
+            <second-page flex></second-page>
           </section>
           <section hash="three" layout vertical>
-            <div>third</div>
+            <third-page flex></third-page>
           </section>
           <section hash="four" layout vertical>
-            <div>fourth</div>
+            <fourth-page flex></fourth-page>
           </section>
           <section hash="five" layout vertical>
-            <div>fifth</div>
+            <fifth-page flex></fifth-page>
           </section>
         </core-animated-pages>
       </div>
