@@ -4,7 +4,7 @@
 }
 
 :host /deep/ core-toolbar {
-  background-color: #607D8B;
+  background-color: #4CAF50;
   color: #fff;
 }
 
@@ -23,8 +23,8 @@ core-animated-pages {
 }
 
 core-animated-pages > * {
-  font-size: 50px;
-  background-color: #999999;
+  font-size: 24px;
+  background-color: white;
 }
 
 core-menu {

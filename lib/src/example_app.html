@@ -24,10 +24,10 @@
         </core-menu>
       </core-header-panel>
 
-      <core-toolbar tool flex>
+      <core-toolbar tool flex class="bottom">
         <div flex>{{selectedPage.header}}</div>
       </core-toolbar>
-      <div layout horizontal fit>
+      <div layout horizontal center-center fit>
 <!-- Readd on-tap="{{cyclePages}}" if you want pages to progress when clicking on blank space   -->
         <core-animated-pages id="pages" selected="{{route}}" valueattr="hash" transitions="slide-from-right">              
 <!--           <template repeat="{{page in pages}}">
@@ -35,7 +35,7 @@
               <div>{{page.name}}</div>
             </section>
           </template> -->
-          <section hash="one" layout vertical>
+          <section hash="one" layout vertical center-center>
             <first-page flex></first-page>
           </section>
           <section hash="two" layout vertical>
