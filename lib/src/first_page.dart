@@ -8,6 +8,7 @@ import 'elements.dart';
 
 @CustomTag('first-page')
 class FirstPage extends PolymerElement{
-  FirstPage.created() : super.created();
-  
+  FirstPage.created() : super.created(){
+  }
+
 }

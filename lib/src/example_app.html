@@ -7,7 +7,7 @@
                     keys="up down left right space space+shift"
                     on-keys-pressed="{{keyHandler}}"></core-a11y-keys>
 
-    <core-scaffold id="scaffold" mode="waterfall-tall">
+    <core-scaffold id="scaffold" mode="waterfall-tall" on-scroll="{{scrollCheck}}">
       <core-header-panel id="drawer" navigation flex mode="standard">
         <core-toolbar id="logo-holder" layout horizontal center-center>
           <core-image src="Logotron-Red.svg"></core-image>
@@ -25,7 +25,7 @@
       </core-header-panel>
 
       <core-toolbar tool flex class="bottom">
-        <div flex>{{selectedPage.header}}</div>
+        <div flex><h1 id="header">{{selectedPage.header}}</h1></div>
       </core-toolbar>
       <div layout horizontal center-center fit>
 <!-- Readd on-tap="{{cyclePages}}" if you want pages to progress when clicking on blank space   -->
@@ -35,19 +35,19 @@
               <div>{{page.name}}</div>
             </section>
           </template> -->
-          <section hash="one" layout vertical center-center>
+          <section hash="one" class="holder">
             <first-page flex></first-page>
           </section>
-          <section hash="two" layout vertical>
+          <section hash="two" class="holder">
             <second-page flex></second-page>
           </section>
-          <section hash="three" layout vertical>
+          <section hash="three" class="holder">
             <third-page flex></third-page>
           </section>
-          <section hash="four" layout vertical>
+          <section hash="four" class="holder">
             <fourth-page flex></fourth-page>
           </section>
-          <section hash="five" layout vertical>
+          <section hash="five" class="holder">
             <fifth-page flex></fifth-page>
           </section>
         </core-animated-pages>

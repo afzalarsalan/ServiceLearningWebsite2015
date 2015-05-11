@@ -33,14 +33,16 @@ class Page {
 class ExampleApp extends PolymerElement {
   /// The current selected [Page].
   @observable Page selectedPage;
+  
+  @observable int scrollTick;
 
   /// The list of pages in our app.
   final List<Page> pages = const [
-    const Page('First', 'one', 'Our mission' ,isDefault: true),
-    const Page('Second', 'two', 'The known truth'),
-    const Page('Third', 'three', 'The accepted failure'),
-    const Page('Fourth', 'four', 'The harsh reality'),
-    const Page('Fifth', 'five', 'What we can do'),
+    const Page('Overview', 'one', 'Our mission' ,isDefault: true),
+    const Page('Religion', 'two', 'The known truth'),
+    const Page('Race', 'three', 'The accepted failure'),
+    const Page('Women', 'four', 'The harsh reality'),
+    const Page('Action', 'five', 'What we can do'),
   ];
 
   /// The path of the current [Page].
@@ -53,7 +55,7 @@ class ExampleApp extends PolymerElement {
     CoreHeaderPanel headerPanel = scaffold.shadowRoot
         .querySelector('core-drawer-panel')
         .querySelector('core-header-panel');
-    headerPanel.setAttribute('tallClass', 'medium-tall');
+    headerPanel.setAttribute('tallClass', 'tall');
   }
 
   /// Convenience getters that return the expected types to avoid casts.
@@ -62,6 +64,7 @@ class ExampleApp extends PolymerElement {
   CoreAnimatedPages get corePages => $['pages'];
   CoreMenu get menu => $['menu'];
   BodyElement get body => document.body;
+  HtmlElement get header => $['header'];
 
   domReady() {
     // Set up the routes for all the pages.
@@ -140,5 +143,13 @@ class ExampleApp extends PolymerElement {
   /// Close the menu whenever you select an item.
   void menuItemClicked(_) {
     scaffold.closeDrawer();
+  }
+
+  void scrollCheck(Event e, detail, sender){
+    //window.confirm('What up');
+    if(window.scrollY>0){
+      window.confirm('What up');
+      //header.classes.toggle('shrunk');
+    }   
   }
 }
