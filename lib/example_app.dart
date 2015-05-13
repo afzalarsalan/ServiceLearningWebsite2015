@@ -33,7 +33,9 @@ class Page {
 class ExampleApp extends PolymerElement {
   /// The current selected [Page].
   @observable Page selectedPage;
-  
+  CoreHeaderPanel headerPanel;
+  bool headerCollapsed;
+  int lastScroll;
   @observable int scrollTick;
 
   /// The list of pages in our app.
@@ -52,10 +54,11 @@ class ExampleApp extends PolymerElement {
   final Router router = new Router(useFragment: true);
 
   ExampleApp.created() : super.created() {
-    CoreHeaderPanel headerPanel = scaffold.shadowRoot
+    headerPanel = scaffold.shadowRoot
         .querySelector('core-drawer-panel')
         .querySelector('core-header-panel');
-    headerPanel.setAttribute('tallClass', 'tall');
+    headerCollapsed = !(headerPanel.scroller.scrollTop==0);
+    lastScroll=0;
   }
 
   /// Convenience getters that return the expected types to avoid casts.
@@ -145,11 +148,16 @@ class ExampleApp extends PolymerElement {
     scaffold.closeDrawer();
   }
 
-  void scrollCheck(Event e, detail, sender){
-    //window.confirm('What up');
-    if(window.scrollY>0){
-      window.confirm('What up');
-      //header.classes.toggle('shrunk');
-    }   
+  void scrollCheck(Event e, var detail, Node target){
+    var scroller = headerPanel.scroller;
+    //Crazy detection algorithim to ensure that the header text transform happens when it's supposed to.
+    if(scroller.scrollTop>=100&&scroller.scrollTop-lastScroll>=0&&headerCollapsed==false){
+      headerCollapsed=true;
+      header.classes.toggle('shrunk');
+    }
+    else if(scroller.scrollTop<=100&&scroller.scrollTop-lastScroll<=0&&headerCollapsed==true){
+      headerCollapsed=false;
+      header.classes.toggle('shrunk');
+    }
   }
 }

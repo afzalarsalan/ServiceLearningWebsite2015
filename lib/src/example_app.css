@@ -35,8 +35,8 @@
 }
 
 .shrunk{
-  transform: scale(0.44444);
-  -webkit-transform: scale(0.44444);
+  transform: scale(0.44444) translateY(.97em);
+  -webkit-transform: scale(0.44444) translateY(.97em);
 }
 
 core-animated-pages {
