@@ -1,5 +1,5 @@
 :host {
-  font-family: "RobotoDraft";
+  font-family: "RobotoDraft", sans-serif;
   font-weight: 300;
 }
 
@@ -31,6 +31,7 @@
   padding-right: 64px;
   padding-top: 24px;
   padding-bottom: 24px;
+  /*max-width: 912px;*/
 
 }
 
