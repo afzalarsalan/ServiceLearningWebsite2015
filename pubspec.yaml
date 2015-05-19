@@ -10,6 +10,7 @@ dependencies:
   paper_elements: any
   polymer: any
   route_hierarchical: any
+  modern_charts: any
 transformers:
 - polymer:
     entry_points: web/index.html

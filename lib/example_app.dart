@@ -41,7 +41,7 @@ class ExampleApp extends PolymerElement {
   /// The list of pages in our app.
   final List<Page> pages = const [
     const Page('Overview', 'one', 'Our mission' ,isDefault: true),
-    const Page('Religion', 'two', 'The known truth'),
+    const Page('Religion', 'two', 'Religious Intolerance'),
     const Page('Race', 'three', 'The accepted failure'),
     const Page('Women', 'four', 'The harsh reality'),
     const Page('Action', 'five', 'What we can do'),

@@ -1,6 +1,6 @@
 :host {
   font-family: "RobotoDraft", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 :host /deep/ core-toolbar {
@@ -17,10 +17,10 @@
 }
 
 #header{
-  font-weight: 300;
+  font-weight: 400;
   font-size: 45px;
   height: 48px;
-  margin-left: 1em;
+  margin-left: 0.5em;
   margin-bottom: 1em;
   transform-origin:0 0;
   -webkit-transform-origin: 0 0;
