@@ -95,6 +95,9 @@ class ExampleApp extends PolymerElement {
       selectedPage = pages.firstWhere((page) => page.path == route);
     }
     router.go(selectedPage.name, {});
+    if(selectedPage.name==pages[1].name){
+      
+    }
   }
 
   /// Updates [route] whenever we enter a new route.

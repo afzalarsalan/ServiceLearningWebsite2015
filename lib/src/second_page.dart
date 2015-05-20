@@ -15,6 +15,10 @@ class SecondPage extends PolymerElement {
   SecondPage.created() : super.created();
 
   domReady() {
+  	
+  }
+
+  static void chartRefresh(){
   	var table = new DataTable(
   		[
   			['Religion', 'Discrimination'],
@@ -41,7 +45,7 @@ class SecondPage extends PolymerElement {
   		}
   	};
 
-  	var chart = new GaugeChart(chartbody);
+  	var chart = new GaugeChart());
   	chart.draw(table,options);
   }
 }
